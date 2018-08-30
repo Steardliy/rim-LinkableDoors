@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<Operation Class="PatchOperationAdd">
+		<xpath>*/ThingDef[@Name="DoorBase"]/comps</xpath>
+		<value>
+			<li Class="LinkableDoors.CompProperties_Linkable">
+				<linkableLimit>9999</linkableLimit>
+			</li>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ThingDef[@Name="DoorBase"]/thingClass</xpath>
+		<value>
+			<thingClass>LinkableDoors.Building_LinkableDoor</thingClass>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationSequence">
+	  <success>Always</success>
+	  <operations>
+	    <li Class="PatchOperationTest">
+	      <xpath>*/ThingDef[thingClass = "Building_Door"]/thingClass</xpath>
+	    </li>
+	    <li Class="PatchOperationReplace">
+			<xpath>*/ThingDef[thingClass = "Building_Door"]/thingClass</xpath>
+			<value>
+				<thingClass>LinkableDoors.Building_LinkableDoor</thingClass>
+			</value>
+		</li>
+		<li Class="PatchOperationAdd">
+			<xpath>*/ThingDef[thingClass = "LinkableDoors.Building_LinkableDoor"]/comps</xpath>
+			<value>
+				<li Class="LinkableDoors.CompProperties_Linkable">
+				<linkableLimit>9999</linkableLimit>
+			</li>
+			</value>
+		</li>
+	  </operations>
+	</Operation>
+	
+</Patch>
