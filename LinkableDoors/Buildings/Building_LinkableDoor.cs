@@ -46,7 +46,7 @@ namespace LinkableDoors
             {
                 base.DoorOpen(param);
             }
-            //base.FriendlyTouched();
+            //base.FriendlyTouched(); 
             base.ticksUntilClose = param;
         }
 
