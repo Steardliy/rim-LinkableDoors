@@ -18,6 +18,32 @@
 	
 	
 	<!-- 
+	///////////////// Patches for Door Curtains
+	-->
+	<Operation Class="PatchOperationSequence">
+	  <success>Always</success>
+	  <operations>
+	    <li Class="PatchOperationTest">
+	      <xpath>*/ThingDef[@Name="CCPDoorCurtain"]</xpath>
+	    </li>
+	    <li Class="PatchOperationReplace">
+			<xpath>*/ThingDef[@Name="CCPDoorCurtain"]/thingClass</xpath>
+			<value>
+				<thingClass>LinkableDoors.Building_LinkableDoor</thingClass>
+			</value>
+		</li>
+		<li Class="PatchOperationAdd">
+			<xpath>*/ThingDef[@Name="CCPDoorCurtain"]/comps</xpath>
+			<value>
+				<li Class="LinkableDoors.CompProperties_Linkable">
+				<linkableLimit>9999</linkableLimit>
+			</li>
+			</value>
+		</li>
+	  </operations>
+	</Operation>
+	
+	<!-- 
 	///////////////// Patches for Concrete Walls v0.19
 	-->
 	<Operation Class="PatchOperationSequence">
