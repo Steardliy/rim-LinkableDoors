@@ -18,6 +18,32 @@
 	
 	
 	<!-- 
+	///////////////// Patches for [1.0] Palisades
+	-->
+	<Operation Class="PatchOperationSequence">
+	  <success>Always</success>
+	  <operations>
+	    <li Class="PatchOperationTest">
+	      <xpath>*/ThingDef[@Name="DoorBase_Palisade"]</xpath>
+	    </li>
+	    <li Class="PatchOperationReplace">
+			<xpath>*/ThingDef[@Name="DoorBase_Palisade"]/thingClass</xpath>
+			<value>
+				<thingClass>LinkableDoors.Building_LinkableDoor</thingClass>
+			</value>
+		</li>
+		<li Class="PatchOperationAdd">
+			<xpath>*/ThingDef[@Name="DoorBase_Palisade"]/comps</xpath>
+			<value>
+				<li Class="LinkableDoors.CompProperties_Linkable">
+				<linkableLimit>9999</linkableLimit>
+			</li>
+			</value>
+		</li>
+	  </operations>
+	</Operation>
+	
+	<!-- 
 	///////////////// Patches for Door Curtains
 	-->
 	<Operation Class="PatchOperationSequence">
