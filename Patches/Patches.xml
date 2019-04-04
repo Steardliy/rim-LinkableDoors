@@ -16,9 +16,86 @@
 		</value>
 	</Operation>
 	
+	<!-- 
+	///////////////// Patches for Vault [1.0]
+	-->
+	<Operation Class="PatchOperationSequence">
+	  <success>Always</success>
+	  <operations>
+	    <li Class="PatchOperationTest">
+		  <xpath>*/ThingDef[@Name="VaultDoorBase"]</xpath>
+		</li>
+		<li Class="PatchOperationReplace">
+		  <xpath>*/ThingDef[@Name="VaultDoorBase"]/thingClass</xpath>
+		  <value>
+		    <thingClass>LinkableDoors.Building_LinkableDoor</thingClass>
+		  </value>
+		</li>
+		<li Class="PatchOperationAdd">
+		  <xpath>*/ThingDef[@Name="VaultDoorBase"]/comps</xpath>
+		  <value>
+		    <li Class="LinkableDoors.CompProperties_Linkable">
+		    <linkableLimit>9999</linkableLimit>
+		  </li>
+		  </value>
+		</li>
+	  </operations>
+	</Operation>
 	
 	<!-- 
-	///////////////// Anti-tunnel Wall [1.0]
+	///////////////// Patches for DDA Security and More
+	-->
+	<Operation Class="PatchOperationSequence">
+	  <success>Always</success>
+	  <operations>
+	    <li Class="PatchOperationTest">
+	      <xpath>*/ThingDef[@Name="MiscDoorBase"]</xpath>
+	    </li>
+	    <li Class="PatchOperationReplace">
+			<xpath>*/ThingDef[@Name="MiscDoorBase"]/thingClass</xpath>
+			<value>
+				<thingClass>LinkableDoors.Building_LinkableDoor</thingClass>
+			</value>
+		</li>
+		<li Class="PatchOperationAdd">
+			<xpath>*/ThingDef[@Name="MiscDoorBase"]/comps</xpath>
+			<value>
+				<li Class="LinkableDoors.CompProperties_Linkable">
+				<linkableLimit>9999</linkableLimit>
+			</li>
+			</value>
+		</li>
+	  </operations>
+	</Operation>
+	
+	<!-- 
+	///////////////// Patches for [RF] Concrete [1.0]
+	-->
+	<Operation Class="PatchOperationSequence">
+	  <success>Always</success>
+	  <operations>
+	    <li Class="PatchOperationTest">
+	      <xpath>*/ThingDef[@Name="RFC_DoorBase"]</xpath>
+	    </li>
+	    <li Class="PatchOperationReplace">
+			<xpath>*/ThingDef[@Name="RFC_DoorBase"]/thingClass</xpath>
+			<value>
+				<thingClass>LinkableDoors.Building_LinkableDoor</thingClass>
+			</value>
+		</li>
+		<li Class="PatchOperationAdd">
+			<xpath>*/ThingDef[@Name="RFC_DoorBase"]/comps</xpath>
+			<value>
+				<li Class="LinkableDoors.CompProperties_Linkable">
+				<linkableLimit>9999</linkableLimit>
+			</li>
+			</value>
+		</li>
+	  </operations>
+	</Operation>
+	
+	<!-- 
+	///////////////// Patches for Anti-tunnel Wall [1.0]
 	-->
 	<Operation Class="PatchOperationSequence">
 	  <success>Always</success>

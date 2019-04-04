@@ -3,6 +3,6 @@
 	<name>[v1.0]-LinkableDoors</name>
 	<author>Steardliy</author>
 	<url></url>
-	<targetVersion>1.0.2059</targetVersion>
-	<description>A mod which the graphics of adjacent doors combine.\n\n[version 2.4.8] 2018/Dec 16</description>
+	<supportedVersions><li>1.0</li></supportedVersions>
+	<description>A mod which the graphics of adjacent doors combine.\n\n[version 2.4.11] 2019/Apr 4</description>
  </ModMetaData>
