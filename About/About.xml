@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
  <ModMetaData>
-	<name>[v1.0]-LinkableDoors</name>
+	<name>LinkableDoors</name>
 	<author>Steardliy</author>
 	<url></url>
-	<supportedVersions><li>1.0</li></supportedVersions>
-	<description>A mod which the graphics of adjacent doors combine.\n\n[version 2.4.11] 2019/Apr 4</description>
+	<packageId>Steardliy.LinkableDoors</packageId>
+	<supportedVersions>
+		<li>1.0</li>
+		<li>1.1</li>
+	</supportedVersions>
+	<description>A mod which the graphics of adjacent doors combine.\n\n[version 2.4.11] 2019/Apr 4 + 1.1 UPDATE</description>
  </ModMetaData>

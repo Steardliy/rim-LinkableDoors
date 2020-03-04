@@ -66,7 +66,7 @@ namespace LinkableDoors
             }
 
             base.Rotation = this.linkable.LineDirection;
-            float num = Mathf.Clamp01((float)this.visualTicksOpen / (float)base.TicksToOpenNow);
+            float num = Mathf.Clamp01((float)this.ticksSinceOpen / (float)base.TicksToOpenNow);
 
             float[] move = { 0, 0 };
             int index;
