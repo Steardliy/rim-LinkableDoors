@@ -20,6 +20,7 @@ namespace LinkableDoors
             }
             this.linkable.CallBack = this.CallBack;
         }
+
         public override void Tick()
         {
             base.Tick();
@@ -40,6 +41,7 @@ namespace LinkableDoors
                 }
             }
         }
+
         public void CallBack(int param)
         {
             if (!base.Open)
@@ -130,6 +132,7 @@ namespace LinkableDoors
             }
             base.Comps_PostDraw();
         }
+
         private float GetMoveOffset(PositionTag tag)
         {
             return this.linkable.GroupParent.GetCommonFieldSum(tag);

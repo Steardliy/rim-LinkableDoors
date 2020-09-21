@@ -1,12 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
- <ModMetaData>
-	<name>LinkableDoors</name>
-	<author>Steardliy</author>
-	<url></url>
-	<packageId>Steardliy.LinkableDoors</packageId>
+<ModMetaData>
+	<name>LinkableDoors (unofficial)</name>
+	<author>Linkolas</author>
+	<packageId>Linkolas.LinkableDoors</packageId>
+	<url>https://github.com/Linkolas/rim-LinkableDoors</url>
 	<supportedVersions>
 		<li>1.0</li>
 		<li>1.1</li>
+		<li>1.2</li>
 	</supportedVersions>
-	<description>A mod which the graphics of adjacent doors combine.\n\n[version 2.4.11] 2019/Apr 4 + 1.1 UPDATE</description>
- </ModMetaData>
+	<description>
+A mod that combines the graphics of adjacent doors.
+
+[version 2.4.11] 2019/Apr 4
+
+Original mod by Steardliy : https://steamcommunity.com/sharedfiles/filedetails/?id=1498129268
+1.1/1.2 UPDATE by Linkolas
+	</description>
+</ModMetaData>
