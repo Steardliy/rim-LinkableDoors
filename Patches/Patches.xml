@@ -1,334 +1,42 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <Patch>
-	<Operation Class="PatchOperationAdd">
-		<xpath>*/ThingDef[@Name="DoorBase"]/comps</xpath>
-		<value>
-			<li Class="LinkableDoors.CompProperties_Linkable">
-				<linkableLimit>9999</linkableLimit>
-			</li>
-		</value>
-	</Operation>
-	
-	<Operation Class="PatchOperationReplace">
-		<xpath>*/ThingDef[@Name="DoorBase"]/thingClass</xpath>
-		<value>
-			<thingClass>LinkableDoors.Building_LinkableDoor</thingClass>
-		</value>
-	</Operation>
-	
-	<!-- 
-	///////////////// Patches for Vault [1.0]
-	-->
-	<Operation Class="PatchOperationSequence">
-	  <success>Always</success>
-	  <operations>
-	    <li Class="PatchOperationTest">
-		  <xpath>*/ThingDef[@Name="VaultDoorBase"]</xpath>
-		</li>
-		<li Class="PatchOperationReplace">
-		  <xpath>*/ThingDef[@Name="VaultDoorBase"]/thingClass</xpath>
-		  <value>
-		    <thingClass>LinkableDoors.Building_LinkableDoor</thingClass>
-		  </value>
-		</li>
-		<li Class="PatchOperationAdd">
-		  <xpath>*/ThingDef[@Name="VaultDoorBase"]/comps</xpath>
-		  <value>
-		    <li Class="LinkableDoors.CompProperties_Linkable">
-		    <linkableLimit>9999</linkableLimit>
-		  </li>
-		  </value>
-		</li>
-	  </operations>
-	</Operation>
-	
-	<!-- 
-	///////////////// Patches for DDA Security and More
-	-->
-	<Operation Class="PatchOperationSequence">
-	  <success>Always</success>
-	  <operations>
-	    <li Class="PatchOperationTest">
-	      <xpath>*/ThingDef[@Name="MiscDoorBase"]</xpath>
-	    </li>
-	    <li Class="PatchOperationReplace">
-			<xpath>*/ThingDef[@Name="MiscDoorBase"]/thingClass</xpath>
-			<value>
-				<thingClass>LinkableDoors.Building_LinkableDoor</thingClass>
-			</value>
-		</li>
-		<li Class="PatchOperationAdd">
-			<xpath>*/ThingDef[@Name="MiscDoorBase"]/comps</xpath>
-			<value>
-				<li Class="LinkableDoors.CompProperties_Linkable">
-				<linkableLimit>9999</linkableLimit>
-			</li>
-			</value>
-		</li>
-	  </operations>
-	</Operation>
-	
-	<!-- 
-	///////////////// Patches for [RF] Concrete [1.0]
-	-->
-	<Operation Class="PatchOperationSequence">
-	  <success>Always</success>
-	  <operations>
-	    <li Class="PatchOperationTest">
-	      <xpath>*/ThingDef[@Name="RFC_DoorBase"]</xpath>
-	    </li>
-	    <li Class="PatchOperationReplace">
-			<xpath>*/ThingDef[@Name="RFC_DoorBase"]/thingClass</xpath>
-			<value>
-				<thingClass>LinkableDoors.Building_LinkableDoor</thingClass>
-			</value>
-		</li>
-		<li Class="PatchOperationAdd">
-			<xpath>*/ThingDef[@Name="RFC_DoorBase"]/comps</xpath>
-			<value>
-				<li Class="LinkableDoors.CompProperties_Linkable">
-				<linkableLimit>9999</linkableLimit>
-			</li>
-			</value>
-		</li>
-	  </operations>
-	</Operation>
-	
-	<!-- 
-	///////////////// Patches for Anti-tunnel Wall [1.0]
-	-->
-	<Operation Class="PatchOperationSequence">
-	  <success>Always</success>
-	  <operations>
-	    <li Class="PatchOperationTest">
-	      <xpath>*/ThingDef[@Name="AntiDoorBase"]</xpath>
-	    </li>
-	    <li Class="PatchOperationReplace">
-			<xpath>*/ThingDef[@Name="AntiDoorBase"]/thingClass</xpath>
-			<value>
-				<thingClass>LinkableDoors.Building_LinkableDoor</thingClass>
-			</value>
-		</li>
-		<li Class="PatchOperationAdd">
-			<xpath>*/ThingDef[@Name="AntiDoorBase"]/comps</xpath>
-			<value>
-				<li Class="LinkableDoors.CompProperties_Linkable">
-				<linkableLimit>9999</linkableLimit>
-			</li>
-			</value>
-		</li>
-	  </operations>
-	</Operation>
-	
-	
-	<!-- 
-	///////////////// Patches for [1.0] Palisades
-	-->
-	<Operation Class="PatchOperationSequence">
-	  <success>Always</success>
-	  <operations>
-	    <li Class="PatchOperationTest">
-	      <xpath>*/ThingDef[@Name="DoorBase_Palisade"]</xpath>
-	    </li>
-	    <li Class="PatchOperationReplace">
-			<xpath>*/ThingDef[@Name="DoorBase_Palisade"]/thingClass</xpath>
-			<value>
-				<thingClass>LinkableDoors.Building_LinkableDoor</thingClass>
-			</value>
-		</li>
-		<li Class="PatchOperationAdd">
-			<xpath>*/ThingDef[@Name="DoorBase_Palisade"]/comps</xpath>
-			<value>
-				<li Class="LinkableDoors.CompProperties_Linkable">
-				<linkableLimit>9999</linkableLimit>
-			</li>
-			</value>
-		</li>
-	  </operations>
-	</Operation>
-	
-	<!-- 
-	///////////////// Patches for Door Curtains
-	-->
-	<Operation Class="PatchOperationSequence">
-	  <success>Always</success>
-	  <operations>
-	    <li Class="PatchOperationTest">
-	      <xpath>*/ThingDef[@Name="CCPDoorCurtain"]</xpath>
-	    </li>
-	    <li Class="PatchOperationReplace">
-			<xpath>*/ThingDef[@Name="CCPDoorCurtain"]/thingClass</xpath>
-			<value>
-				<thingClass>LinkableDoors.Building_LinkableDoor</thingClass>
-			</value>
-		</li>
-		<li Class="PatchOperationAdd">
-			<xpath>*/ThingDef[@Name="CCPDoorCurtain"]/comps</xpath>
-			<value>
-				<li Class="LinkableDoors.CompProperties_Linkable">
-				<linkableLimit>9999</linkableLimit>
-			</li>
-			</value>
-		</li>
-	  </operations>
-	</Operation>
-	
-	<!-- 
-	///////////////// Patches for Concrete Walls v0.19
-	-->
-	<Operation Class="PatchOperationSequence">
-	  <success>Always</success>
-	  <operations>
-	    <li Class="PatchOperationTest">
-	      <xpath>*/ThingDef[defName="ConcreteAutodoor"]</xpath>
-	    </li>
-	    <li Class="PatchOperationReplace">
-			<xpath>*/ThingDef[defName="ConcreteAutodoor"]/thingClass</xpath>
-			<value>
-				<thingClass>LinkableDoors.Building_LinkableDoor</thingClass>
-			</value>
-		</li>
-		<li Class="PatchOperationAdd">
-			<xpath>*/ThingDef[defName="ConcreteAutodoor"]/comps</xpath>
-			<value>
-				<li Class="LinkableDoors.CompProperties_Linkable">
-				<linkableLimit>9999</linkableLimit>
-			</li>
-			</value>
-		</li>
-	  </operations>
-	</Operation>
-	
-	<!-- 
-	///////////////// Patches for WA-Door v0.19
-	-->
-	<Operation Class="PatchOperationSequence">
-	  <success>Always</success>
-	  <operations>
-	    <li Class="PatchOperationTest">
-	      <xpath>*/ThingDef[@Name="WA-DoorBase"]</xpath>
-	    </li>
-	    <li Class="PatchOperationReplace">
-			<xpath>*/ThingDef[@Name="WA-DoorBase"]/thingClass</xpath>
-			<value>
-				<thingClass>LinkableDoors.Building_LinkableDoor</thingClass>
-			</value>
-		</li>
-		<li Class="PatchOperationAdd">
-			<xpath>*/ThingDef[@Name="WA-DoorBase"]/comps</xpath>
-			<value>
-				<li Class="LinkableDoors.CompProperties_Linkable">
-				<linkableLimit>9999</linkableLimit>
-			</li>
-			</value>
-		</li>
-	  </operations>
-	</Operation>
-	
-	<!-- 
-	///////////////// Patches for fusuma plus
-	-->
-	<Operation Class="PatchOperationSequence">
-	  <success>Always</success>
-	  <operations>
-	    <li Class="PatchOperationTest">
-	      <xpath>*/ThingDef[Name="fusuma_DoorBase"]</xpath>
-	    </li>
-	    <li Class="PatchOperationReplace">
-			<xpath>*/ThingDef[Name="fusuma_DoorBase"]/thingClass</xpath>
-			<value>
-				<thingClass>LinkableDoors.Building_LinkableDoor</thingClass>
-			</value>
-		</li>
-		<li Class="PatchOperationAdd">
-			<xpath>*/ThingDef[Name="fusuma_DoorBase"]/comps</xpath>
-			<value>
-				<li Class="LinkableDoors.CompProperties_Linkable">
-				<linkableLimit>9999</linkableLimit>
-			</li>
-			</value>
-		</li>
-	  </operations>
-	</Operation>
-	
-	
-	<!-- 
-	///////////////// Patches for Glass+Lights
-	-->
-	<Operation Class="PatchOperationSequence">
-	  <success>Always</success>
-	  <operations>
-	    <li Class="PatchOperationTest">
-	      <xpath>*/ThingDef[@Name="DoorGlassBase"]</xpath>
-	    </li>
-	    <li Class="PatchOperationReplace">
-			<xpath>*/ThingDef[@Name="DoorGlassBase"]/thingClass</xpath>
-			<value>
-				<thingClass>LinkableDoors.Building_LinkableDoor</thingClass>
-			</value>
-		</li>
-		<li Class="PatchOperationAdd">
-			<xpath>*/ThingDef[@Name="DoorGlassBase"]/comps</xpath>
-			<value>
-				<li Class="LinkableDoors.CompProperties_Linkable">
-				<linkableLimit>9999</linkableLimit>
-			</li>
-			</value>
-		</li>
-	  </operations>
-	</Operation>
-	
-	<!-- 
-	///////////////// Try to work with Doors Expanded...
-	-->
-	<!--<Operation Class="PatchOperationSequence">
-	  <success>Always</success>
-	  <operations>
-	    <li Class="PatchOperationTest">
-	      <xpath>*/DoorsExpanded.DoorExpandedDef[defName = "HeronCurtainTribal"]</xpath>
-	    </li>
-	    <li Class="PatchOperationReplace">
-			<xpath>*/DoorsExpanded.DoorExpandedDef[defName = "HeronCurtainTribal"]/thingClass</xpath>
-			<value>
-				<thingClass>LinkableDoors.Building_LinkableDoor</thingClass>
-			</value>
-		</li>
-		<li Class="PatchOperationAdd">
-			<xpath>*/DoorsExpanded.DoorExpandedDef[defName = "HeronCurtainTribal"]</xpath>
-			<value>
-				<comps></comps>
-			</value>
-		</li>
-		<li Class="PatchOperationAdd">
-			<xpath>*/DoorsExpanded.DoorExpandedDef[defName = "HeronCurtainTribal"]/comps</xpath>
-			<value>
-				<li Class="LinkableDoors.CompProperties_Linkable">
-				<linkableLimit>9999</linkableLimit></li>
-			</value>
-		</li>
-		<li Class="PatchOperationTest">
-	      <xpath>*/DoorsExpanded.DoorExpandedDef[defName = "PH_DoorJail"]</xpath>
-	    </li>
-	    <li Class="PatchOperationReplace">
-			<xpath>*/DoorsExpanded.DoorExpandedDef[defName = "PH_DoorJail"]/thingClass</xpath>
-			<value>
-				<thingClass>LinkableDoors.Building_LinkableDoor</thingClass>
-			</value>
-		</li>
-		<li Class="PatchOperationAdd">
-			<xpath>*/DoorsExpanded.DoorExpandedDef[defName = "PH_DoorJail"]</xpath>
-			<value>
-				<comps></comps>
-			</value>
-		</li>
-		<li Class="PatchOperationAdd">
-			<xpath>*/DoorsExpanded.DoorExpandedDef[defName = "PH_DoorJail"]/comps</xpath>
-			<value>
-				<li Class="LinkableDoors.CompProperties_Linkable">
-				<linkableLimit>9999</linkableLimit></li>
-			</value>
-		</li>
-	  </operations>
-	</Operation>-->
-	
+    <Operation Class="PatchOperationSequence">
+        <operations>
+            <li Class="PatchOperationAdd">
+                <!-- Base, Vault [1.0], Security and More, Concrete [1.0], Anti-tunnel Wall [1.0], [1.0] Palisades, Door Curtains, Concrete Walls v0.19, WA-Door v0.19, fusuma plus, Glass+Lights -->
+                <xpath>Defs/*[self::ThingDef[@Name="DoorBase"] or 
+                    self::ThingDef[@Name="VaultDoorBase"] or 
+                    self::ThingDef[@Name="MiscDoorBase"] or 
+                    self::ThingDef[@Name="RFC_DoorBase"] or 
+                    self::ThingDef[@Name="AntiDoorBase"] or 
+                    self::ThingDef[@Name="DoorBase_Palisade"] or 
+                    self::ThingDef[@Name="CCPDoorCurtain"] or 
+                    self::ThingDef[defName="ConcreteAutodoor"] or 
+                    self::ThingDef[@Name="WA-DoorBase"] or 
+                    self::ThingDef[@Name="fusuma_DoorBase"] or 
+                    self::ThingDef[@Name="DoorGlassBase"]]/comps</xpath>
+                <value>
+                    <li Class="LinkableDoors.CompProperties_Linkable">
+                        <linkableLimit>9999</linkableLimit>
+                    </li>
+                </value>
+            </li>
+            <li Class="PatchOperationReplace">
+                <xpath>/Defs/ThingDef[@Name="DoorBase" or 
+                    @Name="VaultDoorBase" or 
+                    @Name="MiscDoorBase" or 
+                    @Name="RFC_DoorBase" or 
+                    @Name="AntiDoorBase" or 
+                    @Name="DoorBase_Palisade" or 
+                    @Name="CCPDoorCurtain" or 
+                    defName="ConcreteAutodoor" or 
+                    @Name="WA-DoorBase" or 
+                    @Name="fusuma_DoorBase" or 
+                    @Name="DoorGlassBase"]/thingClass</xpath>
+                <value>
+                    <thingClass>LinkableDoors.Building_LinkableDoor</thingClass>
+                </value>
+            </li>
+        </operations>
+    </Operation>
 </Patch>
