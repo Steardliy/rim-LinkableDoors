@@ -20,6 +20,7 @@ namespace LinkableDoors
             }
             this.linkable.CallBack = this.CallBack;
         }
+
         public override void Tick()
         {
             base.Tick();
@@ -40,6 +41,7 @@ namespace LinkableDoors
                 }
             }
         }
+
         public void CallBack(int param)
         {
             if (!base.Open)
@@ -66,7 +68,7 @@ namespace LinkableDoors
             }
 
             base.Rotation = this.linkable.LineDirection;
-            float num = Mathf.Clamp01((float)this.visualTicksOpen / (float)base.TicksToOpenNow);
+            float num = Mathf.Clamp01((float)this.ticksSinceOpen / (float)base.TicksToOpenNow);
 
             float[] move = { 0, 0 };
             int index;
@@ -130,6 +132,7 @@ namespace LinkableDoors
             }
             base.Comps_PostDraw();
         }
+
         private float GetMoveOffset(PositionTag tag)
         {
             return this.linkable.GroupParent.GetCommonFieldSum(tag);
